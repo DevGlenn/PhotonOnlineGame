@@ -10,6 +10,8 @@ public class ServerLauncher : MonoBehaviourPunCallbacks
     [SerializeField] TMP_InputField roomNameField;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
+    [SerializeField] Transform roomListContent;
+    [SerializeField] GameObject roomListObject;
     private string gameVersion = "1";  // this separates users from eachother when they try to join the same room
 
     private void Awake()
@@ -64,5 +66,10 @@ public class ServerLauncher : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         MenuScreenManager.Instance.OpenMenuScreen("title");
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList) // stores are values of my room
+    {
+        
     }
 }
