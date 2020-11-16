@@ -17,7 +17,7 @@ public class MenuScreenManager : MonoBehaviour
         {
             if (menuscreens[i].menuScreenTitle == menuScreenTitle) // check the name of the menu
             {
-                OpenMenuScreen(menuscreens[i]); // if the name corresponds open the menu
+                menuscreens[i].OpenMenuScreen(); // if the name corresponds open the menu
             }
             else if (menuscreens[i].menuscreenIsOpen) // if this is not the case, or the menu is open and we want to close it.
             {
